@@ -8,7 +8,7 @@ namespace prac41
 {
     public class BookArray
     {
-        List<Book> books;
+        public List<Book> books;
         public BookArray(List<Book> books)
         {
             this.books = books;
@@ -20,8 +20,7 @@ namespace prac41
         }
         public void SortBooks(BookComparison book)
         {
-            BookComparison comparer = new BookComparison(book);
-            books.Sort(comparer);
+            books.Sort(new Comparison<Book>(book));
         } 
     }
 }
